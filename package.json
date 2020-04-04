@@ -1,20 +1,42 @@
 {
-  "name": "miguel-duran-webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FernandoGalende/webpack-custom-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/FernandoGalende/webpack-custom-app/issues"
-  },
-  "homepage": "https://github.com/FernandoGalende/webpack-custom-app#readme"
+	"name": "miguel-duran-webpack",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --mode production --watch",
+		"dev": "webpack-dev-server",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FernandoGalende/webpack-custom-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/FernandoGalende/webpack-custom-app/issues"
+	},
+	"homepage": "https://github.com/FernandoGalende/webpack-custom-app#readme",
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"@babel/preset-react": "^7.9.4",
+		"babel-loader": "^8.1.0",
+		"compression-webpack-plugin": "^3.1.0",
+		"css-loader": "^3.4.2",
+		"html-webpack-plugin": "^4.0.4",
+		"node-sass": "^4.13.1",
+		"sass": "^1.26.3",
+		"sass-loader": "^8.0.2",
+		"style-loader": "^1.1.3",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"webpack-dev-server": "^3.10.3"
+	},
+	"dependencies": {
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	}
 }

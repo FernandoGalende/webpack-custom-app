@@ -26,6 +26,9 @@ const SassRules = {
 	],
 };
 
+const ProductionPlugins = [new CompressionPlugin()];
+const DevelopmentPlugins = [];
+
 module.exports = (env, {mode}) => ({
 	entry: './src/index.js',
 	output: {
@@ -35,7 +38,7 @@ module.exports = (env, {mode}) => ({
 		rules: [JavascriptRules, SassRules],
 	},
 	plugins: [
-		mode === 'production' && new CompressionPlugin(),
+		...(mode === 'production' ? ProductionPlugins : DevelopmentPlugins),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html',
 		}),
